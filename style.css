@@ -158,3 +158,5 @@ h1{font-weight:700;letter-spacing:-.2px}h2{font-weight:700}.big{font-weight:700;
 .scatter{position:fixed;inset:0;z-index:49;pointer-events:none;overflow:hidden}.scatter span{position:absolute;bottom:-40px;font-size:26px;animation:rise 2.2s ease-out forwards;opacity:0}
 @keyframes rise{0%{opacity:0;transform:translateY(0) scale(.6)}20%{opacity:1}100%{opacity:0;transform:translateY(-70vh) scale(1.1)}}
 @media (prefers-reduced-motion:reduce){.cheer{animation:none!important;opacity:1}}
+.credit{margin:14px 0 0;text-align:center;font-size:10px;color:var(--mut);opacity:.55}
+.srcw{margin:8px 0 10px;text-align:center;font-size:11px;color:var(--mut);opacity:.75}
