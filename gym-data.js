@@ -15,3 +15,6 @@ C:[{ar:'فراشة الصدر',en:'Pec Deck (Fly Machine)',m:'صدر',rest:60,ti
 const GYM_SETS=3,GYM_REPS='10-12',SET_SEC=40,WARM=3,COOL=2,SWITCH=60;
 // تقدير المدة: إحماء + لكل تمرين (3 مجموعات × 40ث + راحتين + دقيقة تنقّل) + تهدئة
 function gymMinutes(v){return Math.round(WARM+COOL+v.reduce((a,e)=>a+(GYM_SETS*SET_SEC+(GYM_SETS-1)*e.rest+SWITCH)/60,0))}
+// صور التمارين: مولّدة بالذكاء الاصطناعي لـ«يومي» (انظر CREDITS.md) — إطار البداية يسار والنهاية يمين
+const GYM_IMG={'Chest Press Machine':'A0','Seated Cable Row':'A1','Leg Press':'A2','Shoulder Press Machine':'A3','Incline Chest Press Machine':'B0','Lat Pulldown':'B1','Seated Leg Curl':'B2','Ab Crunch Machine':'B3','Pec Deck (Fly Machine)':'C0','Seated Row Machine (close grip)':'C1','Leg Extension':'C2','Lateral Raise Machine':'C3'};
+function exImg(e,cls){const k=GYM_IMG[e.en];if(!k)return'';return`<figure class="exfig ${cls||''}" data-a="zoom" data-k="${k}" data-t="${e.ar.replace(/"/g,'')}"><img src="img/gym/${k}.webp" loading="lazy" decoding="async" width="800" height="450" alt="طريقة أداء ${e.ar.replace(/"/g,'')}: البداية والنهاية"><figcaption dir="ltr"><span>البداية</span><span>النهاية</span></figcaption></figure>`}
